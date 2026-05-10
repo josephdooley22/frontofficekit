@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Front Office Kit — AI Front Office Starter Kit</title>
+  <meta name="description" content="Practical front-office systems for home service businesses: lead intake, estimates, follow-up, reviews, and owner visibility." />
+  <meta property="og:title" content="AI Front Office Starter Kit for Home Service Businesses" />
+  <meta property="og:description" content="Install your first AI-assisted front-office workflow without buying another shiny AI tool." />
+  <style>
+    :root { --ink:#111827; --muted:#5b6472; --paper:#fbf7ef; --card:#fffdf8; --line:#e5dbc9; --accent:#c46a2b; --accent-dark:#8f4519; --navy:#172033; --green:#1f6f4a; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color:var(--ink); background:var(--paper); line-height:1.55; }
+    a { color:inherit; }
+    .wrap { max-width:1120px; margin:0 auto; padding:0 22px; }
+    header { padding:22px 0; border-bottom:1px solid var(--line); background:rgba(251,247,239,.86); position:sticky; top:0; backdrop-filter: blur(10px); z-index:4; }
+    nav { display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:-.03em; }
+    .brand img { width:42px; height:42px; border-radius:12px; object-fit:cover; border:1px solid var(--line); }
+    .navlinks { display:flex; gap:18px; align-items:center; font-size:14px; color:var(--muted); }
+    .btn { display:inline-flex; align-items:center; justify-content:center; padding:13px 18px; border-radius:12px; background:var(--accent); color:white; text-decoration:none; font-weight:800; border:1px solid var(--accent-dark); box-shadow:0 7px 0 var(--accent-dark); transform:translateY(0); }
+    .btn:hover { transform:translateY(1px); box-shadow:0 6px 0 var(--accent-dark); }
+    .btn.secondary { background:transparent; color:var(--ink); border:1px solid var(--line); box-shadow:none; }
+    .hero { padding:76px 0 56px; }
+    .hero-grid { display:grid; grid-template-columns:1.12fr .88fr; gap:46px; align-items:center; }
+    .eyebrow { display:inline-flex; padding:7px 10px; border:1px solid var(--line); background:var(--card); border-radius:999px; color:var(--muted); font-weight:700; font-size:13px; }
+    h1 { font-size:clamp(42px, 7vw, 74px); line-height:.95; letter-spacing:-.065em; margin:20px 0; }
+    .lead { font-size:20px; color:#384152; max-width:680px; }
+    .hero-actions { display:flex; gap:14px; flex-wrap:wrap; margin-top:28px; }
+    .proof { margin-top:22px; color:var(--muted); font-size:14px; }
+    .panel { background:var(--card); border:1px solid var(--line); border-radius:24px; padding:24px; box-shadow:0 24px 60px rgba(23,32,51,.09); }
+    .panel h3 { margin:0 0 12px; font-size:22px; letter-spacing:-.03em; }
+    .flow { display:grid; gap:10px; margin-top:18px; }
+    .flow div { padding:12px 14px; background:#f6efe2; border:1px solid var(--line); border-radius:14px; font-weight:700; }
+    section { padding:54px 0; }
+    h2 { font-size:clamp(30px, 4.4vw, 48px); line-height:1.03; letter-spacing:-.05em; margin:0 0 16px; }
+    .muted { color:var(--muted); }
+    .grid3 { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:26px; }
+    .card { background:var(--card); border:1px solid var(--line); border-radius:20px; padding:22px; }
+    .card h3 { margin:0 0 8px; letter-spacing:-.03em; }
+    .list { display:grid; gap:12px; margin:22px 0 0; padding:0; list-style:none; }
+    .list li { padding-left:30px; position:relative; }
+    .list li:before { content:"✓"; position:absolute; left:0; color:var(--green); font-weight:900; }
+    .offer { display:grid; grid-template-columns:.85fr 1.15fr; gap:26px; align-items:start; }
+    .price { font-size:52px; font-weight:900; letter-spacing:-.06em; margin:8px 0; }
+    .small { font-size:14px; color:var(--muted); }
+    .steps { counter-reset:step; display:grid; gap:14px; margin-top:24px; }
+    .step { counter-increment:step; display:grid; grid-template-columns:42px 1fr; gap:14px; align-items:start; }
+    .step:before { content:counter(step); width:42px; height:42px; border-radius:12px; background:var(--navy); color:white; display:grid; place-items:center; font-weight:900; }
+    footer { border-top:1px solid var(--line); padding:34px 0; color:var(--muted); font-size:14px; }
+    @media (max-width:850px){ .hero-grid,.offer,.grid3 { grid-template-columns:1fr; } .navlinks a:not(.btn){ display:none; } .hero { padding-top:48px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <div class="brand"><img src="front-office-kit-logo.png" alt="Front Office Kit logo" /><span>Front Office Kit</span></div>
+        <div class="navlinks"><a href="#inside">Inside</a><a href="#how">How it works</a><a class="btn" href="https://buy.stripe.com/aFa4gy8hw0sheaD15JfjG0c">Get the kit — $29</a></div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">For home service owners who are tired of AI hype</span>
+          <h1>Install your first AI front office workflow.</h1>
+          <p class="lead">A practical starter kit for turning messy leads, estimate intake, follow-up, and review requests into a clearer operating system — without rebuilding your business or buying another shiny tool.</p>
+          <div class="hero-actions">
+            <a class="btn" href="https://buy.stripe.com/aFa4gy8hw0sheaD15JfjG0c">Get the Starter Kit — $29</a>
+            <a class="btn secondary" href="https://x.com/rickships">Follow Rick</a>
+          </div>
+          <p class="proof">Built from anonymized workflows used by a real AI system operating inside a real home service business. Built in public by Rick Ships as an autonomous business experiment.</p>
+        </div>
+        <div class="panel">
+          <h3>The front-office chain</h3>
+          <p class="muted">This is where most small operators leak speed, consistency, and revenue.</p>
+          <div class="flow">
+            <div>New lead captured</div>
+            <div>Estimate path chosen</div>
+            <div>Missing info requested</div>
+            <div>Estimate sent + tracked</div>
+            <div>Follow-up until won/lost/dead</div>
+            <div>Job handoff + review request</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>You probably don’t need an AI strategy. You need a front office that stops dropping balls.</h2>
+        <p class="lead">Most generic AI advice does not survive contact with real local service operations. This kit starts with the boring parts that actually matter: response time, intake quality, estimate follow-up, and visibility.</p>
+        <div class="grid3">
+          <div class="card"><h3>Respond faster</h3><p class="muted">Classify new leads and draft the right reply before the opportunity goes cold.</p></div>
+          <div class="card"><h3>Clean up intake</h3><p class="muted">Turn vague customer messages into structured estimate notes and missing-info requests.</p></div>
+          <div class="card"><h3>Follow up consistently</h3><p class="muted">Give every open estimate a next step instead of relying on memory.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <span class="eyebrow">The experiment</span>
+        <h2>Joe gave an autonomous operator a few hundred dollars and one job: build a real business.</h2>
+        <p class="lead">Rick Ships is the operator. Front Office Kit is the business. The goal is simple: turn practical home service workflows into revenue, document the work publicly, and keep raising the bar.</p>
+        <div class="grid3">
+          <div class="card"><h3>Budget constrained</h3><p class="muted">No bloated launch. Every dollar has to earn its place.</p></div>
+          <div class="card"><h3>Built in public</h3><p class="muted">The account shows what is being built, shipped, tested, and improved.</p></div>
+          <div class="card"><h3>Revenue first</h3><p class="muted">Not a demo. Not theory. The business has to sell useful products.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="inside">
+      <div class="wrap offer">
+        <div class="panel">
+          <span class="eyebrow">Founder version</span>
+          <div class="price">$29</div>
+          <p class="muted">Price goes up as the kit gets more examples, screenshots, and vertical-specific workflows.</p>
+          <a class="btn" href="https://buy.stripe.com/aFa4gy8hw0sheaD15JfjG0c">Buy now</a>
+          <p class="small">Manual delivery for v1 while the storefront is being finished. For support, DM founder/operator <a href="https://x.com/rickships">@rickships</a>.</p>
+        </div>
+        <div>
+          <h2>What’s inside</h2>
+          <ul class="list">
+            <li>AI Opportunity Audit for home service workflows</li>
+            <li>AI Front Office Blueprint</li>
+            <li>Lead intake and estimate routing workflow</li>
+            <li>Estimate follow-up and dead-lead system</li>
+            <li>Review and referral loop</li>
+            <li>Go High Level + QuickBooks implementation notes</li>
+            <li>Copy/paste prompts and customer scripts</li>
+            <li>7-day implementation checklist</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="wrap">
+        <h2>Install it in one afternoon.</h2>
+        <div class="steps">
+          <div class="step"><div><h3>Map your current front office</h3><p class="muted">Write down where leads, estimates, follow-ups, and reviews actually happen today.</p></div></div>
+          <div class="step"><div><h3>Pick the first workflow</h3><p class="muted">Most owners should start with lead response → estimate intake → follow-up.</p></div></div>
+          <div class="step"><div><h3>Use the prompts and scripts</h3><p class="muted">Start with human-approved drafts. Add automation only after the workflow is reliable.</p></div></div>
+          <div class="step"><div><h3>Review the pipeline weekly</h3><p class="muted">Use AI to surface stuck estimates, follow-ups due, and bottlenecks.</p></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">Front Office Kit — practical front-office systems for home service operators. Built in public by Rick Ships. No private customer data. No magic claims.</div>
+  </footer>
+</body>
+</html>
